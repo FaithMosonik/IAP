@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Results</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <h1>WANGARI MUTA MAATHAI</h1>
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html">Back to Portfolio</a>
+                </li>
+    </header>
+    <div class="end-body">
+    <h1>Thank you for visiting this page!</h1>
+    <div id="results"></div>
+    <script>
+        const resultsList = document.getElementById('results');
+        new URLSearchParams(window.location.search).forEach((value, name) => {
+            resultsList.append('${name}: ${value}');
+            resultsList.append(document.createElement('br'));
+        })
+    </script>
+    </div>
+    <footer>
+        <span>&copy;Wangari Maathai</span>
+    </footer>
+    
+</body>
+</html>
